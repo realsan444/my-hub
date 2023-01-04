@@ -9,14 +9,16 @@ local MainSECTION = MainTAB:NewSection("CREDITS")
 MainSECTION:NewLabel("Sanjeesh - owner/gui deisgn/scripts and buttons")
 MainSECTION:NewLabel("(WEBSITE) KavoLibary --the buttons and ui and buttons")
 local UpdatesSECTION = MainTAB:NewSection("UPDATES")
-UpdatesSECTION:NewLabel("3/01/2023 created exploit")
-UpdatesSECTION:NewLabel("Added super human infinite yield sit, walkspeed changer")
+UpdatesSECTION:NewLabel(" Update: (1.0.0) 3/01/2023 created exploit")
+UpdatesSECTION:NewLabel("Update: (1.0.1 BETA) Added super human infinite yield sit, walkspeed changer")
 
 
 
 
 
-
+MainSECTION:NewKeybind("Keybind", "When you press that letetr it closes the UI", Enum.KeyCode.F, function()
+	Library:ToggleUI()
+end)
 
 
 
