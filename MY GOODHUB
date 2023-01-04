@@ -1,0 +1,81 @@
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+local Window = Library.CreateLib("Boss Scripts HUB👑", "BloodTheme")
+
+
+
+--MAIN
+local MainTAB = Window:NewTab("Main")
+local MainSECTION = MainTAB:NewSection("CREDITS")
+MainSECTION:NewLabel("Sanjeesh - owner/gui deisgn/scripts and buttons")
+MainSECTION:NewLabel("(WEBSITE) KavoLibary --the buttons and ui and buttons")
+local UpdatesSECTION = MainTAB:NewSection("UPDATES")
+UpdatesSECTION:NewLabel("3/01/2023 created exploit")
+UpdatesSECTION:NewLabel("Added super human infinite yield sit, walkspeed changer")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+--HUMANOID TAB
+local HumanoidTAB = Window:NewTab("Humanoid")
+local HumanoidSECTION = HumanoidTAB:NewSection("HUMANOID/SPEED")
+HumanoidSECTION:NewButton("Sit", "Makes you sit", function()
+    game.Players.LocalPlayer.Character.Humanoid.Sit = true
+end)
+
+HumanoidSECTION:NewToggle("Super-Human", "Credits: 1-f0 makes ur self a super human!!!!", function(state)
+    if state then
+        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 120
+		game.Players.LocalPlayer.Character.Humanoid.JumpPower = 120
+    else
+		game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 16
+		game.Players.LocalPlayer.Character.Humanoid.JumpPower = 50
+    end
+end)
+HumanoidSECTION:NewSlider("Walkspeed", "changes ur walkspeed 500 = max", 500, 16, function(s) -- 500 (MaxValue) | 0 (MinValue)
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
+end)
+
+
+
+
+
+
+
+
+
+
+
+
+--scripts tab.
+local ScriptsTAB = Window:NewTab("Scripts")
+local ScriptsSECTION = ScriptsTAB:NewSection("Scripts:")
+ScriptsSECTION:NewButton("Infinite Yield", "Loads infinite yield", function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+end)
+ScriptsSECTION:NewButton("Get 80m cash", "gives you 80m cash!", function()
+local args = {
+    [1] = false,
+    [2] = 8000000000000000000,
+    [3] = "Cash",
+    [4] = game:GetService("Players").LocalPlayer
+}
+
+game:GetService("ReplicatedStorage").MoneyRequest:FireServer(unpack(args))
+end)
