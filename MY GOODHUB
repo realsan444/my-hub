@@ -16,7 +16,7 @@ UpdatesSECTION:NewLabel("Update: (1.0.1 BETA) Added super human infinite yield s
 
 
 
-MainSECTION:NewKeybind("Keybind", "When you press that letetr it closes the UI", Enum.KeyCode.F, function()
+MainSECTION:NewKeybind("Keybind = f", "When you press that letter it closes the UI", Enum.KeyCode.F, function()
 	Library:ToggleUI()
 end)
 
@@ -52,6 +52,16 @@ HumanoidSECTION:NewToggle("Super-Human", "Credits: 1-f0 makes ur self a super hu
 end)
 HumanoidSECTION:NewSlider("Walkspeed", "changes ur walkspeed 500 = max", 500, 16, function(s) -- 500 (MaxValue) | 0 (MinValue)
     game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
+end)
+HumanoidSECTION:NewToggle("Super-Man", "Credits: 1-f0 makes ur self a super man!!!!", function(state)
+    if state then
+        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 500
+		game.Players.LocalPlayer.Character.Humanoid.JumpPower = 240
+		game.Players.LocalPlayer.Character.Humanoid.Sit = true
+    else
+		game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 16
+		game.Players.LocalPlayer.Character.Humanoid.JumpPower = 50
+    end
 end)
 
 
